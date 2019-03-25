@@ -1,0 +1,12 @@
+.fondo-blanco {
+	background-color: white;
+}
+.top-rounded{
+  border-radius: 5px 5px 0px 0px;
+}
+.bottom-rounded{
+  border-radius: 0px 0px 5px 5px;
+}
+.all-rounded{
+  border-radius: 5px;
+}

@@ -1,0 +1,40 @@
+<app-mensaje-sd></app-mensaje-sd>
+<div class="row justify-content-center">
+  <div class="col-6 shadow-lg p-5 bg-white rounded my-5 fondo-blanco all-rounded">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="row justify-content-center mb-3">
+        <div class="col-6" style="text-align: center">
+          <h3>Iniciar sesion</h3>
+        </div>  
+      </div>
+      <div class="row justify-content-center mb-3">
+        <div class="col-6">
+          <label>Usuario: </label>
+          <input type="text" name="username" [(ngModel)]="creds.username" placeholder="usuario">
+        </div>  
+      </div>
+      <div class="row justify-content-center mb-3">
+        <div class="col-6">
+          <label>Password: </label>
+          <input type="password" name="password" [(ngModel)]="creds.password" placeholder="contraseña">
+        </div>      
+      </div>
+      <div class="row justify-content-center mb-3">
+        <div class="col-3">
+          <button type="submit" class="btn btn-warning shadow p-3 rounded">Iniciar</button>
+        </div>
+      </div>
+    </form>
+    <div class="row justify-content-center">
+      No estas registrado? <a routerLink="/registro" (click)="msgService.limpiar()"> Registrate</a>
+    </div>
+  </div>
+</div>
+<div style="text-align: center">
+  <div *ngIf="log">
+    <h2>It logged</h2>
+    <ul>
+      <li *ngFor="let usuario of usuarios">{{usuario.username}}</li>
+    </ul>
+  </div>  
+</div>
